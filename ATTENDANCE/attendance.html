@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Login Page - Add this before the container div -->
+  <div class="login-container" id="login-page">
+    <div class="login-box">
+      <h1>Teacher Dashboard</h1>
+      <div class="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <p id="error-message" class="error-message"></p>
+        <button class="login-button" id="login-button">Login</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <h1>Welcome, Prof. Ahmed Raza</h1>
+        <div class="header-info">
+          <p><i class="fas fa-building"></i> Computer Science Department</p>
+          <p><i class="fas fa-user-graduate"></i> Senior Faculty</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="date-display">April 11, 2025</div>
+        <div class="time-display" id="currentTime">9:05 AM</div>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#" class="active" id="dashboard-link">Dashboard</a>
+      <a href="#">Schedule</a>
+      <a href="#">Courses</a>
+      <a href="#">Students</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="active">
+      <!-- <div class="dashboard-title">
+        <i class="fas fa-chalkboard-teacher"></i> Your Subjects
+      </div> -->
+
+      <div class="dashboard-header">
+        <div class="dashboard-title">
+          <i class="fas fa-chalkboard-teacher"></i> Your Subjects
+        </div>
+        <button id="add-subject-btn" class="button add-button">
+          <i class="fas fa-plus"></i> Add New Subject
+        </button>
+      </div>
+
+      <div class="subjects-grid">
+        <div class="subject-card" data-subject="advanced-mathematics">
+          <h2>Advanced Mathematics</h2>
+          <div class="subject-info">
+            <p><i class="far fa-clock"></i> 9:00 AM - 10:30 AM</p>
+            <p><i class="far fa-calendar-alt"></i> Mon, Wed, Fri</p>
+            <p><i class="fas fa-map-marker-alt"></i> Room 301</p>
+          </div>
+          <div class="attendance-summary">
+            <div class="attendance-stat present">
+              <p>Present</p>
+              <p>15</p>
+            </div>
+            <div class="attendance-stat absent">
+              <p>Absent</p>
+              <p>3</p>
+            </div>
+            <div class="attendance-stat issues">
+              <p>Issues</p>
+              <p>2</p>
+            </div>
+          </div>
+          <button class="button view-attendance">View Attendance</button>
+        </div>
+
+        <div class="subject-card" data-subject="computer-networks">
+          <h2>Computer Networks</h2>
+          <div class="subject-info">
+            <p><i class="far fa-clock"></i> 11:00 AM - 12:30 PM</p>
+            <p><i class="far fa-calendar-alt"></i> Tue, Thu</p>
+            <p><i class="fas fa-map-marker-alt"></i> Lab 204</p>
+          </div>
+          <div class="attendance-summary">
+            <div class="attendance-stat present">
+              <p>Present</p>
+              <p>18</p>
+            </div>
+            <div class="attendance-stat absent">
+              <p>Absent</p>
+              <p>1</p>
+            </div>
+            <div class="attendance-stat issues">
+              <p>Issues</p>
+              <p>1</p>
+            </div>
+          </div>
+          <button class="button view-attendance">View Attendance</button>
+        </div>
+
+        <div class="subject-card" data-subject="data-structures">
+          <h2>Data Structures</h2>
+          <div class="subject-info">
+            <p><i class="far fa-clock"></i> 2:00 PM - 3:30 PM</p>
+            <p><i class="far fa-calendar-alt"></i> Mon, Wed</p>
+            <p><i class="fas fa-map-marker-alt"></i> Room 105</p>
+          </div>
+          <div class="attendance-summary">
+            <div class="attendance-stat present">
+              <p>Present</p>
+              <p>16</p>
+            </div>
+            <div class="attendance-stat absent">
+              <p>Absent</p>
+              <p>4</p>
+            </div>
+            <div class="attendance-stat issues">
+              <p>Issues</p>
+              <p>0</p>
+            </div>
+          </div>
+          <button class="button view-attendance">View Attendance</button>
+        </div>
+
+        <div class="subject-card" data-subject="operating-systems">
+          <h2>Operating Systems</h2>
+          <div class="subject-info">
+            <p><i class="far fa-clock"></i> 9:30 AM - 11:00 AM</p>
+            <p><i class="far fa-calendar-alt"></i> Tue, Thu</p>
+            <p><i class="fas fa-map-marker-alt"></i> Room 202</p>
+          </div>
+          <div class="attendance-summary">
+            <div class="attendance-stat present">
+              <p>Present</p>
+              <p>14</p>
+            </div>
+            <div class="attendance-stat absent">
+              <p>Absent</p>
+              <p>5</p>
+            </div>
+            <div class="attendance-stat issues">
+              <p>Issues</p>
+              <p>1</p>
+            </div>
+          </div>
+          <button class="button view-attendance">View Attendance</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attendance Page -->
+    <div id="attendance-page">
+      <button class="back-button" id="back-to-dashboard">
+        <i class="fas fa-arrow-left"></i> Back to Dashboard
+      </button>
+
+      <div class="attendance-header">
+        <h1 id="subject-title">Subject Attendance</h1>
+        <div class="date">April 11, 2025 | Friday</div>
+      </div>
+
+      <div class="attendance-stats">
+        <div class="stat-card">
+          <div class="stat-icon present">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="present-count">0</h3>
+            <p>Students Present</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon absent">
+            <i class="fas fa-user-times"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="absent-count">0</h3>
+            <p>Students Absent</p>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon issues">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="stat-info">
+            <h3 id="issues-count">0</h3>
+            <p>Detection Issues</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attendance-columns">
+        <div class="attendance-column">
+          <div class="column-header present">
+            <span>Present Students (<span class="present-count">0</span>)</span>
+            <i class="fas fa-user-check"></i>
+          </div>
+          <div class="column-body" id="present-students">
+            <!-- Present students will be populated here -->
+          </div>
+        </div>
+
+        <div class="attendance-column">
+          <div class="column-header absent">
+            <span>Absent Students (<span class="absent-count">0</span>)</span>
+            <i class="fas fa-user-times"></i>
+          </div>
+          <div class="column-body" id="absent-students">
+            <!-- Absent students will be populated here -->
+          </div>
+        </div>
+
+        <div class="attendance-column">
+          <div class="column-header issues">
+            <span>Detection Issues (<span class="issues-count">0</span>)</span>
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="column-body" id="issue-students">
+            <!-- Students with issues will be populated here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="script.js"></script>
+  <!-- Add Subject Modal -->
+  <div id="add-subject-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add New Subject</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <label for="subject-name">Subject Name</label>
+          <input type="text" id="subject-name" placeholder="e.g. Data Structures">
+        </div>
+        <div class="input-group">
+          <label for="subject-time">Class Time</label>
+          <input type="text" id="subject-time" placeholder="e.g. 9:00 AM - 10:30 AM">
+        </div>
+        <div class="input-group">
+          <label for="subject-days">Days</label>
+          <input type="text" id="subject-days" placeholder="e.g. Mon, Wed, Fri">
+        </div>
+        <div class="input-group">
+          <label for="subject-room">Room</label>
+          <input type="text" id="subject-room" placeholder="e.g. Room 301">
+        </div>
+        <div class="input-group">
+          <label for="program-select">Program</label>
+          <select id="program-select">
+            <option value="">Select Program</option>
+            <option value="cs">Computer Science</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="is">Information Systems</option>
+            <option value="se">Software Engineering</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="semester-select">Semester</label>
+          <select id="semester-select">
+            <option value="">Select Semester</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="cancel-subject" class="button cancel-button">Cancel</button>
+        <button id="save-subject" class="button save-button">Save Subject</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
